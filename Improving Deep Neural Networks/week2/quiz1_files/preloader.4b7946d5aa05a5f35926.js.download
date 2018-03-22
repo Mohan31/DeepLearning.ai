@@ -1,0 +1,18 @@
+/* Polyfill Injector */
+(function(main) {
+    if(/* Intl */!('Intl' in this)) {
+        var js = document.createElement('script');
+        js.src = "https://d3njjcbhbojbot.cloudfront.net/web/bundles/vendor/Intl.js.v0-1-4/Intl.en-US.js?features=Intl";
+        js.onload = main;
+        js.onerror = function() {
+            console.error('Could not load polyfills script!');
+            main();
+        };
+        document.head.appendChild(js);
+    } else {
+        main();
+    }
+})(function() {
+webpackJsonp([67],{Ap1E:function(module,exports){!function(){module.exports=window.preloader_c87119c63b8ef303f9d3}()},Mvo2:function(module,exports,t){module.exports=t("Ap1E")(81)},ytBw:function(module,exports,t){"use strict";t("Mvo2").instrumentAfterPreload()}},["ytBw"]);
+});
+//# sourceMappingURL=preloader.4b7946d5aa05a5f35926.js.map
